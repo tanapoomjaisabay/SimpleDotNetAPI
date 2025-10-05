@@ -1,0 +1,6 @@
+@BookingAPI_HostAddress = http://localhost:5107
+
+GET {{BookingAPI_HostAddress}}/healthz/
+Accept: application/json
+
+###

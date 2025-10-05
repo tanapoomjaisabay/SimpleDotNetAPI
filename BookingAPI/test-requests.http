@@ -1,0 +1,52 @@
+### Flight Fare Search - Economy Class
+POST https://localhost:5001/api/FlightFare/search
+Content-Type: application/json
+
+{
+  "origin": "NYC",
+  "destination": "LON",
+  "departureDate": "2024-06-15",
+  "cabinClass": "Economy",
+  "passengerCount": 2
+}
+
+###
+
+### Flight Fare Search - Business Class with Custom Correlation ID
+POST https://localhost:5001/api/FlightFare/search
+Content-Type: application/json
+X-Correlation-ID: custom-correlation-12345
+
+{
+  "origin": "LAX",
+  "destination": "TYO",
+  "departureDate": "2024-07-20",
+  "cabinClass": "Business",
+  "passengerCount": 1
+}
+
+###
+
+### Flight Fare Search - First Class
+POST https://localhost:5001/api/FlightFare/search
+Content-Type: application/json
+
+{
+  "origin": "SFO",
+  "destination": "SYD",
+  "departureDate": "2024-08-10",
+  "cabinClass": "First",
+  "passengerCount": 3
+}
+
+###
+
+### Flight Fare Service Health Check
+GET https://localhost:5001/api/FlightFare/health
+
+###
+
+### API Health Check
+GET https://localhost:5001/healthz
+
+###
